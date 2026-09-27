@@ -124,7 +124,7 @@ if(ini_get("date.timezone") == ""){ //No Timezone set
 }
 
 gc_enable();
-error_reporting(E_ALL | E_STRICT);
+error_reporting(E_ALL);
 ini_set("allow_url_fopen", 1);
 ini_set("display_errors", 1);
 ini_set("display_startup_errors", 1);
@@ -140,9 +140,10 @@ ini_set("memory_limit", "256M"); //Default
 define("LOG", true);
 define("START_TIME", microtime(true));
 define("MAJOR_VERSION", "2.0.0dev");
-define("CODENAME", "Breadfence"); //i'm not very creative - kotyaralih
+define("POCKET_MINE", "YumeKoujou");
+define("CODENAME", "Sumaraz"); //i'm not very creative - kotyaralih
 define("CURRENT_MINECRAFT_VERSION", "v0.9.5 alpha");
-define("CURRENT_API_VERSION", '13.1');
+define("CURRENT_API_VERSION", '13'); // 修改API使其插件兼容
 define("CURRENT_PHP_VERSION", "8.0");
 $gitsha1 = false;
 if(file_exists(FILE_PATH . ".git/refs/heads/master")){ //Found Git information!

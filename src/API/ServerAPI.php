@@ -111,7 +111,7 @@ class ServerAPI{
 		console("[INFO] Loading properties...");
 		$this->config = new Config(DATA_PATH . "server.properties", CONFIG_PROPERTIES, [
 			"server-name" => "Minecraft: PE Server",
-			"description" => "Server made using NostalgiaCore",
+			"description" => "Server made using YumeKoujou",
 			"motd" => "Welcome @player to this server!",
 			"server-ip" => "",
 			"server-port" => 19132,
@@ -179,8 +179,8 @@ class ServerAPI{
 		$this->server->api = $this;
 		self::$serverRequest = $this->server;
 		$this->server->send2Discord("[INFO] Starting Minecraft PE server version " . CURRENT_MINECRAFT_VERSION);
-		console("[INFO] This server is running NostalgiaCore version " . ($version->isDev() ? FORMAT_YELLOW : "") . MAJOR_VERSION . FORMAT_RESET . " \"" . CODENAME . "\" (MCPE: " . CURRENT_MINECRAFT_VERSION . ") (API " . CURRENT_API_VERSION . ") (PHP " . PHP_VERSION . ")", true, true, 0);
-		console("[INFO] NostalgiaCore is distributed under the LGPL License", true, true, 0);
+		console("[INFO] This server is running " . POCKET_MINE . " version " . ($version->isDev() ? FORMAT_YELLOW : "") . MAJOR_VERSION . FORMAT_RESET . " \"" . CODENAME . "\" (MCPE: " . CURRENT_MINECRAFT_VERSION . ") (API " . CURRENT_API_VERSION . ") (PHP " . PHP_VERSION . ")", true, true, 0);
+		console("[INFO] " . POCKET_MINE . " is distributed under the LGPL License", true, true, 0);
 		$this->loadProperties();
 		$this->loadAPI("console", "ConsoleAPI");
 		$this->loadAPI("level", "LevelAPI");
@@ -277,7 +277,7 @@ class ServerAPI{
 			$value = ["M" => 1, "G" => 1024];
 			$real = ((int) substr($memory, 0, -1)) * $value[substr($memory, -1)];
 			if($real < 128){
-				console("[WARNING] NostalgiaCore may not work right with less than 128MB of RAM", true, true, 0);
+				console("[WARNING] " . POCKET_MINE . " may not work right with less than 128MB of RAM", true, true, 0);
 			}
 			@ini_set("memory_limit", $memory);
 		}else{

@@ -4,7 +4,9 @@ class PocketMinecraftServer{
 	public static $generateCaves = false;
 	public static $chukSendDelay = 0, $chunkLoadingRadius = 4;
 	public static $is0105 = false, $crossplay0105 = false;
-	public $tCnt, $ticks;
+	public $tCnt, $ticks, $doTick;
+	public $levelData, $difficulty, $tiles, $entities;
+	public $schedule, $scheduleCnt, $whitelist, $spawn, $stop, $asyncThread;
 	public $extraprops, $serverID, $interface, $database, $version, $invisible, $tickMeasure, $preparedSQL, $seed, $gamemode, $name, $maxClients, $clients, $eidCnt, $custom, $description, $motd, $port, $saveEnabled;
 	/**
 	 * @var ServerAPI
@@ -675,7 +677,7 @@ class PocketMinecraftServer{
 			E_USER_ERROR => "E_USER_ERROR",
 			E_USER_WARNING => "E_USER_WARNING",
 			E_USER_NOTICE => "E_USER_NOTICE",
-			E_STRICT => "E_STRICT",
+			E_ALL => "E_ALL",
 			E_RECOVERABLE_ERROR => "E_RECOVERABLE_ERROR",
 			E_DEPRECATED => "E_DEPRECATED",
 			E_USER_DEPRECATED => "E_USER_DEPRECATED",

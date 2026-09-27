@@ -72,7 +72,7 @@ class NBT_new{
 	}
 
 	public function feof(){
-		return !isset($this->buffer{$this->offset});
+		return !isset($this->buffer[$this->offset]);
 	}
 
 	public function __construct($endianness = self::LITTLE_ENDIAN){

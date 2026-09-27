@@ -101,7 +101,6 @@ function hard_unset(&$var){
 	if(is_object($var)){
 		$unset = new ReflectionClass($var);
 		foreach($unset->getProperties() as $prop){
-			$prop->setAccessible(true);
 			@hard_unset($prop->getValue($var));
 			$prop->setValue($var, null);
 		}
@@ -247,7 +246,7 @@ function error_handler($errno, $errstr, $errfile, $errline){
 		E_USER_ERROR => "E_USER_ERROR",
 		E_USER_WARNING => "E_USER_WARNING",
 		E_USER_NOTICE => "E_USER_NOTICE",
-		E_STRICT => "E_STRICT",
+		E_ALL => "E_ALL",
 		E_RECOVERABLE_ERROR => "E_RECOVERABLE_ERROR",
 		E_DEPRECATED => "E_DEPRECATED",
 		E_USER_DEPRECATED => "E_USER_DEPRECATED",
