@@ -283,7 +283,7 @@ class Entity extends Position
 	 *
 	 * @return number
 	 */
-	public function getHeight($a)
+	public function getHeight()
 	{
 		return $this->height;
 	}
