@@ -26,7 +26,7 @@ if [ "$PHP_BINARY" == "" ]; then
 	elif [[ ! -z $(type php) ]]; then
 		PHP_BINARY=$(type -p php)
 	else
-		echo​ ​"​Couldn't find a PHP binary in system PATH or ​$PWD​/bin/php5/bin​"
+		echo​ ​"​Couldn't find a PHP binary in system PATH or ​$PWD ​/bin/php5/bin​"
 		exit 1
 	fi
 fi
@@ -36,7 +36,7 @@ if [ "$POCKETMINE_FILE" == "" ]; then
 		POCKETMINE_FILE="./PocketMine-MP.php"
 	else
 		echo​ ​"​PocketMine-MP.php not found​" 
- ​ echo​ ​"​Downloads can be found at https://github.com/kotyaralih/NostalgiaCore"
+ 		echo​ ​"​Downloads can be found at https://github.com/kotyaralih/NostalgiaCore"
 		exit 1
 	fi
 fi

@@ -139,7 +139,7 @@ set_include_path(get_include_path() . PATH_SEPARATOR . FILE_PATH);
 ini_set("memory_limit", "256M"); //Default
 define("LOG", true);
 define("START_TIME", microtime(true));
-define("MAJOR_VERSION", "2.0.0dev");
+define("MAJOR_VERSION", "2.0.1.dev");
 define("POCKET_MINE", "YumeKoujou");
 define("CODENAME", "Sumaraz"); //i'm not very creative - kotyaralih
 define("CURRENT_MINECRAFT_VERSION", "v0.9.5 alpha");

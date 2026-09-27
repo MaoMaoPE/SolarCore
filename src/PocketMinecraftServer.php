@@ -254,7 +254,7 @@ class PocketMinecraftServer{
 		}
 	}
 	
-	public function asyncOperation($type, array $data, callable $callable = null){
+	public function asyncOperation($type, array $data, ?callable $callable = null){
 		if(defined("NO_THREADS")){
 			return false;
 		}
