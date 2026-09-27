@@ -31,7 +31,7 @@ class PluginAPI extends stdClass{
 				$output = $output === "Plugins (0): " ? "No plugins installed." : substr($output, 0, -2);
 				break;
 			case "version":
-				$output = "This server is running " . POCKET_MINE . " version: " . MAJOR_VERSION .", PHP version: ". PHP_VERSION . "\n(Implementing API version #" . CURRENT_API_VERSION . " for Minecraft: PE " . CURRENT_MINECRAFT_VERSION . ")";
+				$output = "This server is running " . POCKET_MINE . " version: " . MAJOR_VERSION .", PHP version: ". PHP_VERSION . " (" . PHP_OS . ")" . "\n(Implementing API version #" . CURRENT_API_VERSION . " for Minecraft: PE " . CURRENT_MINECRAFT_VERSION . ")";
 				if(GIT_COMMIT !== str_repeat("00", 20)){
 					$output .= " (git " . GIT_COMMIT . ")";
 				}
