@@ -3,6 +3,7 @@
 class SmallHouseStructure extends Structure{
 	public $width = 5;
     public $length = 5;
+	public $tmpStructure;
 	public $name = "Small House";
     protected $structure = [
 		0 => [

@@ -48,7 +48,7 @@ class SmallFarmStructure extends Structure{
 	
 	protected function getMappingFor($char){
 		if($char === "R"){
-			$f = lcg_value();
+			$f = mt_rand() / mt_getrandmax();
 			
 			if($f <= 0.5){
 				return [WHEAT_BLOCK, 0];

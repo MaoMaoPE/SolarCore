@@ -3,6 +3,7 @@
 class StrongholdPortalRoomStructure extends Structure{
     public $width = 11;
     public $length = 16;
+	public $tmpStructure;
     public $name = "Portal Room";
     protected $structure = [
 		-1 => [

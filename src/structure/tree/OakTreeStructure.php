@@ -4,6 +4,7 @@ class OakTreeStructure extends Structure{// implements TreeStructure{
 	public $width = 5;
     public $length = 5;
 	public $name = "Oak Tree";
+    public $trunk;
 	protected $structure = [
 	];
 	protected $map = [
