@@ -140,7 +140,7 @@ ini_set("memory_limit", "256M"); //Default
 define("LOG", true);
 define("START_TIME", microtime(true));
 define("MAJOR_VERSION", "2.0.1.dev");
-define("POCKET_MINE", "YumeKoujou");
+define("POCKET_MINE", "Solar");
 define("CODENAME", "Sumaraz"); //i'm not very creative - kotyaralih
 define("CURRENT_MINECRAFT_VERSION", "v0.9.5 alpha");
 define("CURRENT_API_VERSION", '13'); // 修改API使其插件兼容
