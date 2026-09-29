@@ -19,6 +19,9 @@ abstract class BaseEvent{
 	protected $eventName = null;
 	private $status = BaseEvent::NORMAL;
 	private $prioritySlot;
+	private static $handlers;
+	private static $handlerPriority;
+
 
 	public static function getHandlerList(){
 		return static::$handlers;

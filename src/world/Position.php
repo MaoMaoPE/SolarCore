@@ -4,7 +4,7 @@ class Position extends Vector3{
 
 	public $level;
 
-	public function __construct($x = 0, $y = 0, $z = 0, Level $level = null){
+	public function __construct($x = 0, $y = 0, $z = 0, ?Level $level = null){
 		if($x instanceof Vector3){
 			parent::__construct($x->x, $x->y, $x->z);
 		}else{
