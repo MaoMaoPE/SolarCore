@@ -98,7 +98,7 @@ class Config{
 						break;
 					case CONFIG_YAML:
 						$content = $this->fixYAMLIndexes($content);
-						$this->config = yaml_parse($content);
+						$this->config = @yaml_parse($content);
 						break;
 					case CONFIG_SERIALIZED:
 						$this->config = @unserialize($content);
@@ -137,7 +137,7 @@ class Config{
 					$content = json_encode($this->config, JSON_PRETTY_PRINT | JSON_BIGINT_AS_STRING);
 					break;
 				case CONFIG_YAML:
-					$content = yaml_emit($this->config, YAML_UTF8_ENCODING);
+					$content = @yaml_emit($this->config, YAML_UTF8_ENCODING);
 					break;
 				case CONFIG_SERIALIZED:
 					$content = @serialize($this->config);

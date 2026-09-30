@@ -25,3 +25,6 @@ Desktop.ini
 
 # IDEs
 .vscode/
+
+# Stubs
+src/stubs/

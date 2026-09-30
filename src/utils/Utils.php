@@ -220,7 +220,7 @@ class Utils{
 	}
 
 	public static function getRandomUpdateTicks(){
-		return -log(lcg_value()) * 1365.4; //Poisson distribution (1/(68.27 * 20))
+		return -log(mt_rand() / mt_getrandmax()) * 1365.4; //Poisson distribution (1/(68.27 * 20))
 	}
 
 	public static function writeMetadata($data){
