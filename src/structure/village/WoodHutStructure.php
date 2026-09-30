@@ -3,6 +3,7 @@
 class WoodHutStructure extends Structure{
 	public $width = 4;
 	public $length = 6;
+	public $tmpStructure;
 	public $name = "Wood Hut";
     protected $structure = [
 		0 => [

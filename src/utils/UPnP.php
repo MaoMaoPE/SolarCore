@@ -8,7 +8,7 @@ function UPnP_PortForward($port){
 		return false;
 	}
 	$port = (int) $port;
-	$myLocalIP = gethostbyname(trim(`hostname`));
+	$myLocalIP = gethostbyname(trim(shell_exec('hostname')));
 	try{
 		$com = new COM("HNetCfg.NATUPnP");
 		if($com === false or !is_object($com->StaticPortMappingCollection)){

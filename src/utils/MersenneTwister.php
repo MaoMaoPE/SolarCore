@@ -44,6 +44,7 @@ define("MASK32", $val);
 
 
 class MersenneTwister{
+	public $bits32;
 	public $mt;
 	public $mti = 0;
 	static $MAG_01 = [0, MATRIX_A];

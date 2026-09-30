@@ -3,6 +3,10 @@
 class RailLogic
 {
 	public $x, $y, $z;
+	/**
+	 * Summary of level
+	 * @var Level
+	 */
 	public $level;
 	
 	/**
